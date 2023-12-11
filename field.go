@@ -72,7 +72,7 @@ func (r *Field) parse(p *Parser) (err error) {
 
 	// parse identifier
 	p.peekNonWhitespace()
-	identTok := p.nextIdent(false)
+	identTok := p.nextIdent(true)
 	r.Ident = identTok.Raw
 
 	// parse DefaultValue/Options
