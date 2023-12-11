@@ -29,7 +29,7 @@ func (r *Option) String() string {
 
 func (r *Option) parse(p *Parser) (err error) {
 	// can't use keyword as option name
-	identTok := p.nextIdent(false)
+	identTok := p.nextIdent(true)
 	if identTok == nil || identTok.Type != T_IDENT {
 		return p.unexpected(identTok.Raw, "identifier")
 	}
